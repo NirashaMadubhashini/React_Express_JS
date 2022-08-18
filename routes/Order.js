@@ -14,7 +14,7 @@ connection.connect(function(err){
             if(err) throw err;
             console.log(result);
             if(result.warningCount === 0){
-                console.log('Order table created');
+                console.log('Order Table Created');
             }
         })
     }
@@ -41,9 +41,9 @@ router.post('/',(req, res) =>{
 
     connection.query(query, [orderId, date, customerId], (err) =>{
         if(err){
-            res.send({"message" : "duplicate entry"})
+            res.send({"message" : "Duplicate Entry"})
         }else{
-            res.send({"message" : "Order succesfully added!"})
+            res.send({"message" : "Order Added Succesfully!"})
         }
     })
 })
@@ -61,7 +61,7 @@ router.put('/',(req, res) =>{
         if(rows.affectedRows > 0){
             res.send({'message' : 'Order Updated'})
         }else{
-            res.send({'message' : 'Order not found'})
+            res.send({'message' : 'Order Not Found'})
         }
     })
 })
@@ -75,9 +75,9 @@ router.delete('/:orderId', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'Order deleted' })
+            res.send({ 'message': 'Order Deleted' })
         } else {
-            res.send({ 'message': 'Order not found' })
+            res.send({ 'message': 'Order Not Found' })
         }
     })
 })
