@@ -8,7 +8,7 @@ const order = require ('./routes/Order')
 const orderDetail = require ('./routes/OrderDetails')
 
 const app = express()
-const port = 6000
+const port = 4000
 
 app.use(express.json())
 app.use('/customer', customer)
