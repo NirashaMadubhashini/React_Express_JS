@@ -14,7 +14,7 @@ connection.connect(function(err){
             if(err) throw err;
             console.log(result);
             if(result.warningCount === 0){
-                console.log('Customer table created');
+                console.log('Customer Table Created');
             }
         })
     }
@@ -42,9 +42,9 @@ router.post('/',(req, res) =>{
 
     connection.query(query, [id, name, address, salary], (err) =>{
         if(err){
-            res.send({"message" : "duplicate entry"})
+            res.send({"message" : "Duplicate Entry"})
         }else{
-            res.send({"message" : "Customer succesfully added!"})
+            res.send({"message" : "Customer Added Succesfully!"})
         }
     })
 })
@@ -63,7 +63,7 @@ router.put('/',(req, res) =>{
         if(rows.affectedRows > 0){
             res.send({'message' : 'Customer Updated'})
         }else{
-            res.send({'message' : 'Customer not found'})
+            res.send({'message' : 'Customer Not Found'})
         }
     })
 })
@@ -77,9 +77,9 @@ router.delete('/:id', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'Customer deleted' })
+            res.send({ 'message': 'Customer Deleted' })
         } else {
-            res.send({ 'message': 'Customer not found' })
+            res.send({ 'message': 'Customer Not Found' })
         }
     })
 })
