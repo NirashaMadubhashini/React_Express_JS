@@ -14,7 +14,7 @@ connection.connect(function(err){
             if(err) throw err;
             // console.log(result);
             if(result.warningCount === 0){
-                console.log('User table created');
+                console.log('User Table Created');
             }
         })
     }
@@ -41,9 +41,9 @@ router.post('/',(req, res) =>{
 
     connection.query(query, [id, name, username], (err) =>{
         if(err){
-            res.send({"message" : "duplicate entry"})
+            res.send({"message" : "Duplicate Entry"})
         }else{
-            res.send({"message" : "user created!"})
+            res.send({"message" : "User Created!"})
         }
     })
 })
@@ -61,7 +61,7 @@ router.put('/',(req, res) =>{
         if(rows.affectedRows > 0){
             res.send({'message' : 'User Updated'})
         }else{
-            res.send({'message' : 'User not found'})
+            res.send({'message' : 'User Not Found'})
         }
 
     })
@@ -76,9 +76,9 @@ router.delete('/:id', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'user deleted' })
+            res.send({ 'message': 'user Deleted' })
         } else {
-            res.send({ 'message': 'user not found' })
+            res.send({ 'message': 'user Not Found' })
         }
     })
 })
