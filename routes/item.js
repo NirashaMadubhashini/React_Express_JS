@@ -14,7 +14,7 @@ connection.connect(function(err){
             if(err) throw err;
             console.log(result);
             if(result.warningCount === 0){
-                console.log('Item table created');
+                console.log('Item Table Created');
             }
         })
     }
@@ -43,9 +43,9 @@ router.post('/',(req, res) =>{
 
     connection.query(query, [code, name, discription, price, qtyOnHand], (err) =>{
         if(err){
-            res.send({"message" : "duplicate entry"})
+            res.send({"message" : "Duplicate Entry"})
         }else{
-            res.send({"message" : "Item succesfully added!"})
+            res.send({"message" : "Item Added Succesfully!"})
         }
     })
 })
@@ -65,7 +65,7 @@ router.put('/',(req, res) =>{
         if(rows.affectedRows > 0){
             res.send({'message' : 'Item Updated'})
         }else{
-            res.send({'message' : 'Item not found'})
+            res.send({'message' : 'Item Not Found'})
         }
     })
 })
@@ -79,9 +79,9 @@ router.delete('/:code', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'Item deleted' })
+            res.send({ 'message': 'Item Deleted' })
         } else {
-            res.send({ 'message': 'Item not found' })
+            res.send({ 'message': 'Item Not Found' })
         }
     })
 })
