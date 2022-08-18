@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/React_Express-POS-master.iml" filepath="$PROJECT_DIR$/.idea/React_Express-POS-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/React_Express_JS.iml" filepath="$PROJECT_DIR$/.idea/React_Express_JS.iml" />
     </modules>
   </component>
 </project>
